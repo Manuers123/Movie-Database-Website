@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hidden {
+  @apply display: none;
+}
+
+.lg\:hidden {
+ @apply display: block;
+}
+
+.lg\:block {
+  @apply display: none;
+}
+
+
+.link-nav {
+    @apply hover:bg-green-500  hover:rounded-sm hover:w-20
+}
+@layer utilities {
+    .nav::after {
+        @apply content-[''] bg-pink-500 h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300 ease-in-out
+}
+    .nav:hover::after {
+        @apply w-[100%] text-red-600 bg-white
+    }
+}
+    
